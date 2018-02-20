@@ -1,0 +1,373 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>General &mdash; git tutorial 0.0.1 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+        <link rel="index" title="Index"
+              href="genindex.html"/>
+        <link rel="search" title="Search" href="search.html"/>
+    <link rel="top" title="git tutorial 0.0.1 documentation" href="index.html"/>
+        <link rel="next" title="Branch" href="branch.html"/>
+        <link rel="prev" title="GIT tutorial" href="index.html"/> 
+
+  
+  <script src="_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="index.html" class="icon icon-home"> git tutorial
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.0.1
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">General</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#status">Status</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#diff">Diff</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#commit">Commit</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#remove">Remove</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#rename">Rename</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#log">Log</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#undoing-things">Undoing things</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#remote">Remote</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#fetch">Fetch</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#pull">Pull</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#push">Push</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#tag">Tag</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#alias">Alias</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="branch.html">Branch</a></li>
+<li class="toctree-l1"><a class="reference internal" href="rebase.html">Rebase</a></li>
+<li class="toctree-l1"><a class="reference internal" href="reset.html">Reset</a></li>
+<li class="toctree-l1"><a class="reference internal" href="revert.html">Revert</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">git tutorial</a>
+        
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+      <li>General</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/general.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="general">
+<h1>General<a class="headerlink" href="#general" title="Permalink to this headline">¶</a></h1>
+<p><code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">--version</span></code></p>
+<div class="code shell highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">help</span> <span class="n">config</span>
+<span class="n">git</span> <span class="n">help</span> <span class="o">-</span><span class="n">a</span> <span class="c1"># all</span>
+<span class="n">git</span> <span class="n">help</span> <span class="o">-</span><span class="n">g</span> <span class="c1"># guide</span>
+</pre></div>
+</div>
+<div class="code shell highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">config</span> <span class="o">--</span><span class="nb">list</span>
+
+<span class="n">git</span> <span class="n">config</span> <span class="o">--</span><span class="k">global</span> <span class="n">user</span><span class="o">.</span><span class="n">name</span> <span class="s2">&quot;Name Surname&quot;</span>
+<span class="n">git</span> <span class="n">config</span> <span class="o">--</span><span class="k">global</span> <span class="n">user</span><span class="o">.</span><span class="n">email</span> <span class="s2">&quot;name.surname@gmail.com&quot;</span>
+<span class="n">git</span> <span class="n">config</span> <span class="o">--</span><span class="k">global</span> <span class="n">code</span><span class="o">.</span><span class="n">editor</span> <span class="n">nano</span>
+
+<span class="n">git</span> <span class="n">config</span> <span class="o">--</span><span class="n">system</span> <span class="n">user</span><span class="o">.</span><span class="n">name</span>
+<span class="n">git</span> <span class="n">config</span> <span class="o">--</span><span class="k">global</span> <span class="n">user</span><span class="o">.</span><span class="n">name</span>
+<span class="n">git</span> <span class="n">config</span> <span class="o">--</span><span class="n">local</span> <span class="n">user</span><span class="o">.</span><span class="n">name</span>
+</pre></div>
+</div>
+<div class="code shell highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># Create repository in existing directory.</span>
+<span class="n">git</span> <span class="n">init</span>
+
+<span class="c1"># Clone an existing repository.</span>
+<span class="n">git</span> <span class="n">clone</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">aaa</span><span class="nd">@bitbucket</span><span class="o">.</span><span class="n">org</span><span class="o">/</span><span class="n">aaa</span><span class="o">/</span><span class="n">git</span><span class="o">-</span><span class="n">tutorial</span><span class="o">.</span><span class="n">git</span>
+</pre></div>
+</div>
+<div class="section" id="status">
+<h2>Status<a class="headerlink" href="#status" title="Permalink to this headline">¶</a></h2>
+<p><code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">status</span></code></p>
+<p><code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">status</span> <span class="pre">--short</span></code></p>
+<p><code class="docutils literal notranslate"><span class="pre">??</span></code> <img alt="arrow-right" src="_images/arrow_right.png" /> new file created</p>
+<p><code class="docutils literal notranslate"><span class="pre">A_</span></code> <img alt="arrow-right" src="_images/arrow_right.png" /> new file created and staged</p>
+<p><code class="docutils literal notranslate"><span class="pre">AM</span></code> <img alt="arrow-right" src="_images/arrow_right.png" /> new file created, staged and then modified</p>
+<p><code class="docutils literal notranslate"><span class="pre">M_</span></code> <img alt="arrow-right" src="_images/arrow_right.png" /> modified and staged</p>
+<p><code class="docutils literal notranslate"><span class="pre">MM</span></code> <img alt="arrow-right" src="_images/arrow_right.png" /> modified, staged and then modified</p>
+<p><code class="docutils literal notranslate"><span class="pre">_M</span></code> <img alt="arrow-right" src="_images/arrow_right.png" /> modified and not staged</p>
+<p><code class="docutils literal notranslate"><span class="pre">_D</span></code> <img alt="arrow-right" src="_images/arrow_right.png" /> file deleted</p>
+<p><code class="docutils literal notranslate"><span class="pre">D_</span></code> <img alt="arrow-right" src="_images/arrow_right.png" /> file deleted and staged</p>
+<p><code class="docutils literal notranslate"><span class="pre">R_</span></code> <img alt="arrow-right" src="_images/arrow_right.png" /> file renamed and staged</p>
+<p><code class="docutils literal notranslate"><span class="pre">UU`</span> <span class="pre">|arrow-right|</span> <span class="pre">merge</span> <span class="pre">conflict</span></code></p>
+</div>
+<div class="section" id="diff">
+<h2>Diff<a class="headerlink" href="#diff" title="Permalink to this headline">¶</a></h2>
+<p><code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">diff</span></code> <img alt="arrow-right" src="_images/arrow_right.png" /> for <code class="docutils literal notranslate"><span class="pre">_M</span></code></p>
+<p><code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">diff</span> <span class="pre">--staged</span></code> <img alt="arrow-right" src="_images/arrow_right.png" /> for <code class="docutils literal notranslate"><span class="pre">M_</span></code></p>
+</div>
+<div class="section" id="commit">
+<h2>Commit<a class="headerlink" href="#commit" title="Permalink to this headline">¶</a></h2>
+<p><code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">commit</span> <span class="pre">-m</span> <span class="pre">&quot;Commit</span> <span class="pre">message&quot;</span></code></p>
+<p><code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">commit</span> <span class="pre">-a</span> <span class="pre">-m</span> <span class="pre">&quot;Commit</span> <span class="pre">message&quot;</span></code> <img alt="arrow-right" src="_images/arrow_right.png" /> for skipping staging area</p>
+</div>
+<div class="section" id="remove">
+<h2>Remove<a class="headerlink" href="#remove" title="Permalink to this headline">¶</a></h2>
+<p><code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">rm</span> <span class="pre">file_name</span></code> <img alt="arrow-right" src="_images/arrow_right.png" /> removed and staged</p>
+<p><code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">rm</span> <span class="pre">--cached</span> <span class="pre">file_name</span></code> <img alt="arrow-right" src="_images/arrow_right.png" /> removed and staged, also untracked</p>
+<p><code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">rm</span> <span class="pre">-f</span> <span class="pre">file_name</span></code> <img alt="arrow-right" src="_images/arrow_right.png" /> removed and staged (modified files)</p>
+</div>
+<div class="section" id="rename">
+<h2>Rename<a class="headerlink" href="#rename" title="Permalink to this headline">¶</a></h2>
+<p><code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">mv</span> <span class="pre">file_name</span> <span class="pre">new_file_name</span></code></p>
+</div>
+<div class="section" id="log">
+<h2>Log<a class="headerlink" href="#log" title="Permalink to this headline">¶</a></h2>
+<p><code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">log</span></code></p>
+<p><code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">log</span> <span class="pre">-2</span></code> <img alt="arrow-right" src="_images/arrow_right.png" /> last two entries</p>
+<p><code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">log</span> <span class="pre">-p</span></code> <img alt="arrow-right" src="_images/arrow_right.png" /> with diff</p>
+<p><code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">log</span> <span class="pre">--stat</span></code> <img alt="arrow-right" src="_images/arrow_right.png" /> with diff</p>
+<p><code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">log</span> <span class="pre">--pretty=oneline</span></code></p>
+<p><code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">log</span> <span class="pre">--pretty=format:&quot;%h</span> <span class="pre">%an</span> <span class="pre">%ar</span> <span class="pre">%s&quot;</span></code></p>
+<p><code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">log</span> <span class="pre">--pretty=format:&quot;%h</span> <span class="pre">%s&quot;</span> <span class="pre">--graph</span></code></p>
+<p><code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">log</span> <span class="pre">--since=1.hour</span></code></p>
+</div>
+<div class="section" id="undoing-things">
+<h2>Undoing things<a class="headerlink" href="#undoing-things" title="Permalink to this headline">¶</a></h2>
+<p><code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">commit</span> <span class="pre">--amend</span></code> <img alt="arrow-right" src="_images/arrow_right.png" /> change commit message or add changes to the last commit</p>
+<div class="admonition warning">
+<p class="first admonition-title">Warning</p>
+<p class="last">Do not do this after <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">push</span></code></p>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">reset</span> <span class="pre">HEAD</span> <span class="pre">file_name</span></code> <img alt="arrow-right" src="_images/arrow_right.png" /> unstage changes</p>
+<p><code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">checkout</span> <span class="pre">--</span> <span class="pre">file_name</span></code> <img alt="arrow-right" src="_images/arrow_right.png" /> remove all changes from working directory</p>
+<div class="admonition warning">
+<p class="first admonition-title">Warning</p>
+<p class="last">Not recoverable operation.</p>
+</div>
+</div>
+<div class="section" id="remote">
+<h2>Remote<a class="headerlink" href="#remote" title="Permalink to this headline">¶</a></h2>
+<p><code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">remote</span></code> <img alt="arrow-right" src="_images/arrow_right.png" /> show remotes</p>
+<p><code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">remote</span> <span class="pre">-v</span></code> <img alt="arrow-right" src="_images/arrow_right.png" /> show remotes and URL’s</p>
+<p><code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">remote</span> <span class="pre">add</span> <span class="pre">remote_name</span> <span class="pre">remote_url</span></code> <img alt="arrow-right" src="_images/arrow_right.png" /> add remote</p>
+<p><code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">remote</span> <span class="pre">show</span> <span class="pre">origin</span></code> <img alt="arrow-right" src="_images/arrow_right.png" /> show more info</p>
+<p><code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">remote</span> <span class="pre">rename</span> <span class="pre">old_remote_name</span> <span class="pre">new_remote_name</span></code> <img alt="arrow-right" src="_images/arrow_right.png" /> rename remote</p>
+<p><code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">remote</span> <span class="pre">rm</span> <span class="pre">remote_name</span></code></p>
+</div>
+<div class="section" id="fetch">
+<h2>Fetch<a class="headerlink" href="#fetch" title="Permalink to this headline">¶</a></h2>
+<p><code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">fetch</span> <span class="pre">remote_name</span></code></p>
+</div>
+<div class="section" id="pull">
+<h2>Pull<a class="headerlink" href="#pull" title="Permalink to this headline">¶</a></h2>
+<p><code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">pull</span></code> <img alt="arrow-right" src="_images/arrow_right.png" /> fetch and merge</p>
+</div>
+<div class="section" id="push">
+<h2>Push<a class="headerlink" href="#push" title="Permalink to this headline">¶</a></h2>
+<p><code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">push</span> <span class="pre">origin</span> <span class="pre">master</span></code></p>
+</div>
+<div class="section" id="tag">
+<h2>Tag<a class="headerlink" href="#tag" title="Permalink to this headline">¶</a></h2>
+<p><code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">tag</span></code> <img alt="arrow-right" src="_images/arrow_right.png" /> show tags</p>
+<p><code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">tag</span> <span class="pre">0.0.1</span></code> <img alt="arrow-right" src="_images/arrow_right.png" /> create lightweight</p>
+<p><code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">tag</span> <span class="pre">-a</span> <span class="pre">-m</span> <span class="pre">&quot;&quot;</span> <span class="pre">0.0.1</span></code> <img alt="arrow-right" src="_images/arrow_right.png" /> create annotated tag</p>
+<p><code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">show</span> <span class="pre">0.0.1</span></code> <img alt="arrow-right" src="_images/arrow_right.png" /> show tagged commit</p>
+<p><code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">tag</span> <span class="pre">-d</span> <span class="pre">0.0.1</span></code> <img alt="arrow-right" src="_images/arrow_right.png" /> delete tag</p>
+<p><code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">tag</span> <span class="pre">-a</span> <span class="pre">-m</span> <span class="pre">&quot;&quot;</span> <span class="pre">0.0.1</span> <span class="pre">commit_checksum</span></code> <img alt="arrow-right" src="_images/arrow_right.png" /> create annotated (lightweight) tag later</p>
+<p><code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">push</span> <span class="pre">origin</span> <span class="pre">0.0.1</span></code> <img alt="arrow-right" src="_images/arrow_right.png" /> push one tag</p>
+<p><code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">push</span> <span class="pre">origin</span> <span class="pre">--tags</span></code> <img alt="arrow-right" src="_images/arrow_right.png" /> push all tags</p>
+</div>
+<div class="section" id="alias">
+<h2>Alias<a class="headerlink" href="#alias" title="Permalink to this headline">¶</a></h2>
+<p><code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">config</span> <span class="pre">--global</span> <span class="pre">alias.st</span> <span class="pre">&quot;status</span> <span class="pre">--short&quot;</span></code></p>
+</div>
+</div>
+
+
+           </div>
+           <div class="articleComments">
+            
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="branch.html" class="btn btn-neutral float-right" title="Branch" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="index.html" class="btn btn-neutral" title="GIT tutorial" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2017, f7ja39jopj.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'./',
+            VERSION:'0.0.1',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="_static/jquery.js"></script>
+      <script type="text/javascript" src="_static/underscore.js"></script>
+      <script type="text/javascript" src="_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

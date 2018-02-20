@@ -1,0 +1,55 @@
+Branch
+######
+
+``git branch`` |arrow-right| show branches
+
+``git branch new_branch`` |arrow-right| create new branch
+
+``git checkout new_branch`` |arrow-right| switch branch
+
+``git checkout -b new_branch`` |arrow-right| craete new branch and switch to it
+
+``git log --oneline --decorate --graph --all`` |arrow-right| show text tree
+
+``git branch -v`` |arrow-right| show last commit on each branch
+
+``git branch -vv`` |arrow-right| show last commit on each branch and track
+
+``git push origin --delete branch`` |arrow-right| delete remote branch
+
+Merge
+*****
+
+.. code:: shell
+
+    git checkout master
+    git merge new_branch     # Merge new_branch on master
+    git branch -d new_branch # Delete branch
+
+.. code:: shell
+
+    # In case of merge conflict after...
+    git checkout master
+    git merge new_branch
+    # ... resolve conflicts
+    git add
+    git commit -m "Merge."
+
+.. code:: shell
+
+    git branch --merged    # show merged branches
+    git branch --no-merged # show not merged branches
+
+.. code:: shell
+
+    git checkout -b new_branch origin/master # track origin/master on new_branch
+    git branch --track origin/master         # create master branch and track it
+    git branch -u origin/master              # set track on existing branch
+
+.. |arrow-right| image:: images/arrow_right.png
+
+.. |arrow-left| image:: images/arrow_left.png
+
+.. |arrow-down| image:: images/arrow_down.png
+
+.. |arrow-up| image:: images/arrow_up.png

@@ -1,0 +1,46 @@
+Reset
+#####
+
+.. code:: shell
+
+    # Staging area: c.txt.
+    # Working directory: all files.
+    # Untracked area: empty.
+    git reset --soft HEAD~
+
+    # Staging area: empty.
+    # Working directory: all files.
+    # Untracked area: c.txt.
+    git reset --mixed HEAD~
+
+    # Staging area: empty.
+    # Working directory: a.txt, b.txt.
+    # Untracked area: empty.
+    git reset --mixed HEAD~
+
+.. code:: shell
+
+    # Staging area: c.txt, b.txt.
+    # Working directory: all files.
+    # Untracked area: empty.
+    git reset --soft HEAD~2
+
+    # Staging area: empty.
+    # Working directory: all files.
+    # Untracked area: c.txt, b.txt.
+    git reset --mixed HEAD~
+
+    # Staging area: empty.
+    # Working directory: a.txt.
+    # Untracked area: empty.
+    git reset --mixed HEAD~
+
+.. code:: shell
+
+    # Restore after reset.
+    # Show changes list.
+    git reflog
+    git reset HEAD@{N}
+
+    # Show changes list on selected branch.
+    git reflog show master

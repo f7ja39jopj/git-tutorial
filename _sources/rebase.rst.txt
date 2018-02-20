@@ -1,0 +1,30 @@
+Rebase
+######
+
+.. code:: shell
+
+    # rebase
+    git checkout new_branch
+    git rebase master
+
+    # merge
+    git checkout master
+    git merge new_branch
+
+    # delete merged branch
+    git branch -d new_branch
+
+.. code:: shell
+
+    git rebase --onto master server client
+
+    git checkout master
+    git merge client
+
+    git rebase master server
+
+    git checkout master
+    git merge server
+
+    git branch -d client
+    git branch -d server

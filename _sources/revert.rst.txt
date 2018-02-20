@@ -1,0 +1,7 @@
+Revert
+######
+
+.. code:: shell
+
+    # Revert the very last commit.
+    git revert HEAD

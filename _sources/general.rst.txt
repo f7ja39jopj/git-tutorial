@@ -1,0 +1,179 @@
+General
+#######
+
+``git --version``
+
+.. code:: shell
+
+    git help config
+    git help -a # all
+    git help -g # guide
+
+.. code:: shell
+
+    git config --list
+
+    git config --global user.name "Name Surname"
+    git config --global user.email "name.surname@gmail.com"
+    git config --global code.editor nano
+
+    git config --system user.name
+    git config --global user.name
+    git config --local user.name
+
+.. code:: shell
+
+    # Create repository in existing directory.
+    git init
+
+    # Clone an existing repository.
+    git clone https://aaa@bitbucket.org/aaa/git-tutorial.git
+
+Status
+******
+
+``git status``
+
+``git status --short``
+
+``??`` |arrow-right| new file created
+
+``A_`` |arrow-right| new file created and staged
+
+``AM`` |arrow-right| new file created, staged and then modified
+
+``M_`` |arrow-right| modified and staged
+
+``MM`` |arrow-right| modified, staged and then modified
+
+``_M`` |arrow-right| modified and not staged
+
+``_D`` |arrow-right| file deleted
+
+``D_`` |arrow-right| file deleted and staged
+
+``R_`` |arrow-right| file renamed and staged
+
+``UU` |arrow-right| merge conflict``
+
+Diff
+****
+
+``git diff`` |arrow-right| for ``_M``
+
+``git diff --staged`` |arrow-right| for ``M_``
+
+Commit
+******
+
+``git commit -m "Commit message"``
+
+``git commit -a -m "Commit message"`` |arrow-right| for skipping staging area
+
+Remove
+******
+
+``git rm file_name`` |arrow-right| removed and staged
+
+``git rm --cached file_name`` |arrow-right| removed and staged, also untracked
+
+``git rm -f file_name`` |arrow-right| removed and staged (modified files)
+
+Rename
+******
+
+``git mv file_name new_file_name``
+
+Log
+***
+
+``git log``
+
+``git log -2`` |arrow-right| last two entries
+
+``git log -p`` |arrow-right| with diff
+
+``git log --stat`` |arrow-right| with diff
+
+``git log --pretty=oneline``
+
+``git log --pretty=format:"%h %an %ar %s"``
+
+``git log --pretty=format:"%h %s" --graph``
+
+``git log --since=1.hour``
+
+Undoing things
+**************
+
+``git commit --amend`` |arrow-right| change commit message or add changes to the last commit
+
+.. warning:: Do not do this after ``git push``
+
+``git reset HEAD file_name`` |arrow-right| unstage changes
+
+``git checkout -- file_name`` |arrow-right| remove all changes from working directory
+
+.. warning:: Not recoverable operation.
+
+Remote
+******
+
+``git remote`` |arrow-right| show remotes
+
+``git remote -v`` |arrow-right| show remotes and URL's
+
+``git remote add remote_name remote_url`` |arrow-right| add remote
+
+``git remote show origin`` |arrow-right| show more info
+
+``git remote rename old_remote_name new_remote_name`` |arrow-right| rename remote
+
+``git remote rm remote_name``
+
+Fetch
+*****
+
+``git fetch remote_name``
+
+Pull
+****
+
+``git pull`` |arrow-right| fetch and merge
+
+Push
+****
+
+``git push origin master``
+
+Tag
+***
+
+``git tag`` |arrow-right| show tags
+
+``git tag 0.0.1`` |arrow-right| create lightweight
+
+``git tag -a -m "" 0.0.1`` |arrow-right| create annotated tag
+
+``git show 0.0.1`` |arrow-right| show tagged commit
+
+``git tag -d 0.0.1`` |arrow-right| delete tag
+
+``git tag -a -m "" 0.0.1 commit_checksum`` |arrow-right| create annotated (lightweight) tag later
+
+``git push origin 0.0.1`` |arrow-right| push one tag
+
+``git push origin --tags`` |arrow-right| push all tags
+
+Alias
+*****
+
+``git config --global alias.st "status --short"``
+
+.. |arrow-right| image:: images/arrow_right.png
+
+.. |arrow-left| image:: images/arrow_left.png
+
+.. |arrow-down| image:: images/arrow_down.png
+
+.. |arrow-up| image:: images/arrow_up.png
